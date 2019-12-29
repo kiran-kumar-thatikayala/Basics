@@ -1,4 +1,4 @@
-// Simple C++ program on single linked list 
+// Simple C++ program on single linked list ---
   
 // Header file for input output functions 
 #include<iostream>  
