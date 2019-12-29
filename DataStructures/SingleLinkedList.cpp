@@ -1,4 +1,4 @@
-// Simple C++ program to display "Hello World" 
+// Simple C++ program on single linked list 
   
 // Header file for input output functions 
 #include<iostream>  
