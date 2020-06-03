@@ -1,26 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using IterativePattern;
+using System;
 
-namespace IterativePattern
+namespace CommandPattern
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Weeks weeks = new Weeks();
-            weeks[0] = "Sunday";
-            weeks[1] = "Monday";
-            weeks[2] = "Tuesday";
-            weeks[3] = "Wednessday";
-            weeks[4] = "Thursday";
-            weeks[5] = "Friday";
-            weeks[6] = "Saturday";
+            Student[] peopleArray = new Student[3]
+           {
+                new Student("John", "Smith"),
+                new Student("Jim", "Johnson"),
+                new Student("Sue", "Rabon"),
+           };
 
-            IIterator iterator = weeks.GetIterator();
-            for (string s = iterator.First; iterator.IsDone == false; s = iterator.Next)
-            {
-                Console.WriteLine(s);
-            }
+            Students peopleList = new Students(peopleArray);
+            foreach (Student p in peopleList)
+                Console.WriteLine(p.FirstName + " " + p.LastName);
         }
     }
 }
