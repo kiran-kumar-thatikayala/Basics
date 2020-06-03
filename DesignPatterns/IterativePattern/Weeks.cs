@@ -6,10 +6,10 @@ namespace IterativePattern
 {
     public class Weeks : IAggregate
     {
-        IList<string> weeks = new List<string>();
+        IList<string> weeks;
         public Weeks()
         {
-           
+            weeks = new List<string>();
         }
 
         public string this[int index]
