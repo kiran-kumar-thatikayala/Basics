@@ -19,11 +19,8 @@ namespace VisitorPattern
         }
 
         public void PerformOperation(IVisitor visitor)
-        {
-            
+        {            
             //persons.ForEach(person => visitor.Visit(person));
-            
-            
             //the above fails hence double dispatch
             persons.ForEach(person => person.Accept(visitor));
 

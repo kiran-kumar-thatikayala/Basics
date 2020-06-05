@@ -5,6 +5,5 @@
         void Visit(IElement element);
         void Visit(Kid kid);
         void Visit(Teacher kid);
-
     }
 }
