@@ -5,10 +5,10 @@ namespace VisitorPattern
 {
     public class School
     {
-        List<IElement> students;
+        List<IElement> persons;
         public School()
         {
-            students = new List<IElement>()
+            persons = new List<IElement>()
             {
                 new Kid("Kiran"),
                 new Kid("Kumar"),
@@ -20,8 +20,13 @@ namespace VisitorPattern
 
         public void PerformOperation(IVisitor visitor)
         {
-            students.ForEach(kid => kid.Accept(visitor));
-            List<String> names = new List<String>();            
+            
+            //persons.ForEach(person => visitor.Visit(person));
+            
+            
+            //the above fails hence double dispatch
+            persons.ForEach(person => person.Accept(visitor));
+
         }
     }
 }

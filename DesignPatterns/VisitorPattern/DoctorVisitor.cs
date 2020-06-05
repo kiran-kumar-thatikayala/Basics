@@ -13,5 +13,9 @@ namespace VisitorPattern
         {
             Console.WriteLine($"doctor visited teacher {kid.Name}");
         }
+        public void Visit(IElement element)
+        {
+            Console.WriteLine("visited unknown element");
+        }
     }
 }
