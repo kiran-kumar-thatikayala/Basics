@@ -8,11 +8,13 @@ namespace VisitorPattern
         List<IElement> students;
         public School()
         {
-            students = new List<IElement>() 
+            students = new List<IElement>()
             {
                 new Kid("Kiran"),
                 new Kid("Kumar"),
-                new Kid("thatikayala")
+                new Kid("thatikayala"),
+                new Teacher("sudhakar"),
+                new Teacher("Ravi")
             };
         }
 
