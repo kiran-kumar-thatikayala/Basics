@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisitorPattern", "VisitorPa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecoratorPattern", "DecoratorPattern\DecoratorPattern.csproj", "{16702930-F13D-47BE-836F-45E4D3E80AD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePattern", "StatePattern\StatePattern.csproj", "{5F24117B-0AA2-4978-A1B3-37492C81FCFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatePattern", "StatePattern\StatePattern.csproj", "{5F24117B-0AA2-4978-A1B3-37492C81FCFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositePattern", "CompositePattern\CompositePattern.csproj", "{4596C1B4-EEAA-4BFB-97EB-C0FF5EE5CD23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositePattern", "CompositePattern\CompositePattern.csproj", "{4596C1B4-EEAA-4BFB-97EB-C0FF5EE5CD23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MomentoPattern", "MomentoPattern\MomentoPattern.csproj", "{BA064C91-5F18-4DDE-A28D-8670DD3D6030}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{4596C1B4-EEAA-4BFB-97EB-C0FF5EE5CD23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4596C1B4-EEAA-4BFB-97EB-C0FF5EE5CD23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4596C1B4-EEAA-4BFB-97EB-C0FF5EE5CD23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA064C91-5F18-4DDE-A28D-8670DD3D6030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA064C91-5F18-4DDE-A28D-8670DD3D6030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA064C91-5F18-4DDE-A28D-8670DD3D6030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA064C91-5F18-4DDE-A28D-8670DD3D6030}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
