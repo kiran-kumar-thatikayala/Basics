@@ -23,11 +23,16 @@
 
             System.Console.WriteLine("********* Bed Room *********\n");
             BedRoomDoor bedRoomDoor = new BedRoomDoor();  //default state door is open
+            System.Console.WriteLine("pls open door");
             bedRoomDoor.OpenDoor();
 
+            System.Console.WriteLine("pls lock door");
             bedRoomDoor.LockDoor();
 
+            System.Console.WriteLine("pls close door");
             bedRoomDoor.CloseDoor();
+
+            System.Console.WriteLine("pls open door");
             bedRoomDoor.OpenDoor();
 
         }
