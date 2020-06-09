@@ -35,6 +35,14 @@
             System.Console.WriteLine("pls open door");
             bedRoomDoor.OpenDoor();
 
+            System.Console.WriteLine("pls close door");
+            bedRoomDoor.CloseDoor();
+
+            System.Console.WriteLine("pls unlock door");
+            bedRoomDoor.UnLockDoor();
+
+            System.Console.WriteLine("pls lock door");
+            bedRoomDoor.LockDoor();
         }
     }
 }
