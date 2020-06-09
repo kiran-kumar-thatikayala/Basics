@@ -4,25 +4,30 @@ using System.Text;
 
 namespace MomentoPattern
 {
-    public class Originator
+    public class Originator<T>
     {
-        private string text;
+        private T state;
 
-        public void SetText(string text)
+        public void SetState(T state)
         {
-            this.text = text;
+            this.state = state;
         }
 
-        internal Momento<string> StoreInMomento()
+        public T GetState()
         {
-            Momento<string> momento = new Momento<string>();
-            momento.State = this.text;
+                return state;
+        }
+
+        public Momento<T> CreateMemento()
+        {
+            Momento<T> momento = new Momento<T>();
+            momento.SetState(state);
             return momento;
         }
 
-        internal string RestoreFromMomento(Momento<string> momento)
+        public void SetMomento(Momento<T> momento)
         {
-            return momento.State;
+            state = momento.GetState();
         }
     }
 }

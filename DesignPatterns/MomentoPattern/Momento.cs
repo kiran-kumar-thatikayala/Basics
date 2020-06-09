@@ -6,6 +6,16 @@ namespace MomentoPattern
 {
     public class Momento<T>
     {
-        public T State { set; get; }
+        private T state;
+
+        public T GetState()
+        {
+            return state;
+        }
+
+        public void SetState(T state)
+        {
+            this.state = state;
+        }
     }
 }

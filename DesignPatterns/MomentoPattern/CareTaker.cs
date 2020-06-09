@@ -7,18 +7,19 @@ namespace MomentoPattern
     public class CareTaker<T>
     {
         private List<Momento<T>> momentoList = new List<Momento<T>>();
-        public void SaveMomento(Momento<T> momento)
+        public void SaveState(Originator<T> originator)
         {
-            momentoList.Add(momento);
+            momentoList.Add(originator.CreateMemento());
         }
-        public Momento<T> GetMomento(int index)
+        public void RestoreState(Originator<T> originator, int index)
         {
             if (index > -1)
             {
-                return momentoList[index];
+                Momento<T> momento = momentoList[index];
+                originator.SetMomento(momento);
             }
             else
-                return new Momento<T>();
+                originator.SetMomento(new Momento<T>());
         }
     }
 }

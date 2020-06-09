@@ -21,7 +21,7 @@ namespace MomentoPattern
     public partial class MainWindow : Window
     {
 
-        Originator originator = new Originator();
+        Originator<string> originator = new Originator<string>();
         CareTaker<string> careTaker = new CareTaker<string>();
         int currentStatement = -1, saveFiles=0;
         public MainWindow()
@@ -32,8 +32,8 @@ namespace MomentoPattern
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             string text = theStatement.Text;
-            originator.SetText(text);
-            careTaker.SaveMomento(originator.StoreInMomento());
+            originator.SetState(text);
+            careTaker.SaveState(originator);
             saveFiles++;
             currentStatement++;
             btnUndo.IsEnabled = true;
@@ -44,7 +44,8 @@ namespace MomentoPattern
             if (currentStatement >= 0)
             {
                 currentStatement--;
-                theStatement.Text = originator.RestoreFromMomento(careTaker.GetMomento(currentStatement));
+                careTaker.RestoreState(originator, currentStatement);
+                theStatement.Text = originator.GetState();
                 btnRedo.IsEnabled = true;
             }
             else
@@ -58,7 +59,9 @@ namespace MomentoPattern
             if ((saveFiles - 1) > currentStatement)
             {
                 currentStatement++;
-                theStatement.Text = originator.RestoreFromMomento(careTaker.GetMomento(currentStatement));
+                careTaker.RestoreState(originator, currentStatement);
+                theStatement.Text = originator.GetState();
+
                 btnRedo.IsEnabled = true;
             }
             else
