@@ -25,7 +25,8 @@ void merging(int *arr,int low, int mid, int high)
    int n2=high-mid; //high=4,mid=2,high-mid = 4-2=2
  
 
-   int arr1[n1], arr2[n2];
+   int *arr1 = new int[n1];
+   int *arr2 = new int[n2];
 
    for (int index = 0; index <n1; index++)
    {
@@ -57,12 +58,8 @@ void merging(int *arr,int low, int mid, int high)
       arr[k++] = arr2[j++];
    }
 
-   cout<<"after merging:"<< endl;
-   for (int i = 0; i <= high; i++)
-   {
-      cout<<arr[i]<<",";
-   }
-   cout<<endl;
+   delete arr1;
+   delete arr2;
 }
 
 void mergesort(int* arr,int low, int high) {
@@ -83,16 +80,17 @@ int main()
    cout << "Enter the number of elements: ";
    cin >> n;
    
-   int arr[n];     //create an array with given number of elements
+   int *arr  = new int[n];     //create an array with given number of elements
    cout << "Enter elements:" << endl;
    
    for(int i = 0; i<n; i++) {
       cin >> arr[i];
    }  
   
-   mergesort(arr,0,4);
+   mergesort(arr,0,n-1);
    cout << "Array after Sorting: ";
    showlist(arr, n);
 
-    return 1;
+   delete arr;
+    return 0;
 }
